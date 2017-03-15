@@ -1,0 +1,16 @@
+<div id="navigation">
+    <div class="container-fluid">
+        <a href="#" id="brand">后台管理</a>
+        <ul class="main-nav">        
+            <li>
+                <a href="{:url('Admin/index')}" class="dropdown-toggle"><i class="icon-edit"></i><span>管理员设置</span></a>
+            </li>
+        </ul>
+        <div class="user">
+            <ul class="icon-nav">
+                <li class="dropdown"><a href="{:url('Admin/editpwd')}" class="dropdown-toggle"><i class="icon-kf mr5"></i>{$Think.session.username}</a></li>
+                <li class="dropdown" title="退出"><a href="{:url('Admin/logout')}" class="dropdown-toggle"> <i class="icon-exit"></i> </a> </li>
+            </ul>         
+        </div>
+    </div>
+</div>

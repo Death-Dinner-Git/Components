@@ -1,0 +1,73 @@
+{extend name="layout" /}
+{block name="content"}   
+            <div class="box-title">
+                <h3><i class="icon-table"></i>修改密码</h3>
+            </div>
+            <form method="post" class="form-horizontal" id="form">
+                <div class="box-content" style="position:relative">
+                    <div class="bb_s_e8 step_item">
+						<div class="control-group">
+                            <label class="control-label">原密码</label>
+
+                            <div class="controls">
+                                <input type="password" name="oldpassword" class="input-60" datatype="*" errormsg="请输入密码"
+                                       nullmsg="请输入密码！" />
+                            </div>
+                            <p class="hint goods_title_hint"></p>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">新密码</label>
+
+                            <div class="controls">
+                                <input type="password" name="password" class="input-60" onBlur="passwordtestcheck();" />
+                            </div>
+                            <p class="hint goods_title_hint"></p>
+                        </div>
+						<div class="control-group">
+                            <label class="control-label">确认密码</label>
+
+                            <div class="controls">
+                                <input type="password" name="ckpassword" class="input-60" onBlur="passwordtestcheck();" />
+								<span class="Validform_checktip Validform_wrong none_f" id="acacac">两次输入的密码不一致！</span>
+                            </div>
+                            <p class="hint goods_title_hint"></p>
+                        </div>
+                        <div class="form-actions" style="margin-top:25px; margin-bottom:30px;padding-left: 100px;">
+                            <input type="submit" class="btn btn-primary" value=" 提交 ">
+                        </div>
+                    </div>
+                </div>
+            </form>
+<script>
+    $("#form").Validform({
+        tiptype: 3,
+        showAllError: true,
+		url:document.URL,
+		ajaxPost:true,
+		beforeSubmit:function(curform){
+			if($("input[name='password']").val() != $("input[name='ckpassword']").val()){
+				$("#acacac").show();
+				return false;
+			}
+		},
+		callback:function(data){
+			if(data.code == 1){
+				$.Showmsg(data.message);
+				window.location.href='{:url('Login/login')}';
+			}else{
+				$.Showmsg(data.message);
+			}
+			return false;
+		}
+    });
+	passwordtestcheck=function(){
+		if($("input[name='password']").val() != $("input[name='ckpassword']").val()){
+			$("#acacac").show();
+		}else{
+			$("#acacac").hide();
+		}
+	}
+</script>
+
+    {include file="admin/left" /}
+{/block}

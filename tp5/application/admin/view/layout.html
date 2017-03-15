@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    {include file='public:base' /}
+</head>
+<body>
+{include file='public:top_nav' /}
+<div class="container-fluid" id="content">
+    <div id="main">
+    	{block name="content"}{/block}
+        {include file='public:footer'/}
+    </div>
+</div>
+</body>
+</html>

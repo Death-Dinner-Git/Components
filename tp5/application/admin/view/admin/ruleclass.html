@@ -1,0 +1,70 @@
+{extend name="layout" /}
+{block name="content"}
+        <div class="box form-horizontal">
+            <div class="box-title">
+                <h3><i class="icon-table"></i>规则分类</h3>
+            </div>
+			<div class="box-content">
+				<table class="table">
+					<thead>
+						<tr>
+						  <th>ID</th>
+						  <th>分类名称</th>
+						  <th>添加时间</th>
+						  <th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						{volist name="list" id="vo"}
+						<tr>
+							<td>{$vo.classid}</td>
+							<td>{$vo.classname}</td>
+							<td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
+							<td>
+								<a href="{:url('Admin/ruleclass_edit',array('id'=>$vo['classid']))}" class="btn tab-btn btn-success">编辑</a>
+								<a link="{:url('Admin/ruleclass_del',array('id'=>$vo['classid']))}" name="{$vo.classname}" class="btn tab-btn btn-danger del">删除</a>
+							</td>
+						</tr>
+						{/volist}
+						<tr>
+							<td colspan="6"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	<script type="text/javascript">
+		$("#form").Validform({
+	        tiptype: 3,
+	        showAllError: true,
+			ajaxPost:true,
+			callback:function(data){
+				if(data.code == 1){
+					$.Showmsg(data.message);
+					window.location.href='{:url('Admin/ruleclass')}';
+				}else{
+					$.Showmsg(data.message);
+				}
+				return false;
+			}
+	    });
+		$(function(){
+			$(".del").click(function(){
+				var delLink=$(this).attr("link"),$this = $(this);
+	            if(confirm('你确定要删除'+$(this).attr("name")+'吗?')){
+	                $.get(delLink,function(data){
+	                	if(data.code == 1){
+							alert(data.message);
+	                		window.location.reload();
+	                	}else{
+	                		alert(data.message);
+	                	}
+	                })
+	            }
+	            return false;
+			})
+		})
+	</script>
+    {include file="admin/left" /}
+{/block}

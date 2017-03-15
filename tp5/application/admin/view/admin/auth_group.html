@@ -1,0 +1,54 @@
+
+{extend name="layout" /}
+{block name="content"}   
+        <div class="box-title">
+            <h3><i class="icon-table"></i>角色管理</h3>
+        </div>
+		<div class="box-content">
+			<table class="table">
+				<thead>
+					<tr>
+					  <td width="10%">ID</td>
+					  <td width="19%">角色/组</td>
+					  <td width="18%">状态</td>
+					  <td width="29%">创建时间</td>
+					  <td width="24%">操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					{volist name="list" id="vo"}
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo.title}</td>
+						<td>{$vo['status']==1 ? '启用' : '禁用'}</td>
+						<td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
+						<td>
+							<a href="{:url('Admin/group_edit',array('id'=>$vo['id']))}" class="btn tab-btn btn-success">编辑</a>
+							<a link="{:url('Admin/group_del',array('id'=>$vo['id']))}" name="{$vo.title}" class="btn tab-btn btn-danger del">删除</a>
+						</td>
+					</tr>
+					{/volist}
+				</tbody>
+			</table>
+		</div>
+
+		<script type="text/javascript">
+			$(function(){
+				$(".del").click(function(){
+					var delLink=$(this).attr("link"),$this = $(this);
+		            if(confirm('你确定要删除'+$(this).attr("name")+'吗?')){
+		                $.get(delLink,function(data){
+		                	if(data.code == 1){
+								alert(data.message);
+		                		window.location.reload();
+		                	}else{
+		                		alert(data.message);
+		                	}
+		                })
+		            }
+		            return false;
+				})
+			});
+		</script>
+    {include file="admin/left" /}
+{/block}
