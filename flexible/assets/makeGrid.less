@@ -30,7 +30,7 @@
 	.makeCommonGrid(1);
 }
 
-.makeCommonGrid(@index) when (@index < @grid-columns + 1) {
+.makeCommonGrid(@index) when (@index < (@grid-columns + 1)) {
 	.@{grid-name} .col-@{index} {
         width: @grid-column-width * @index + @grid-gutter-width * @index - @grid-gutter-width;
     }
