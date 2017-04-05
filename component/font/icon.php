@@ -64,6 +64,7 @@ file_put_contents('newiconfont.css',$css);
     <title>IconFont</title>
     <link rel="stylesheet" href="demo.css">
     <link rel="stylesheet" href="newiconfont.css">
+<!--    <link rel="stylesheet" href="iconfont.css">-->
 </head>
 <body>
 <div class="main markdown">
