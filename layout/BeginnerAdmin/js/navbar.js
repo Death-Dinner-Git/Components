@@ -9,7 +9,7 @@ layui.define(['element', 'common'], function(exports) {
 
 	var Navbar = function() {
 		/**
-		 *  默认配置 
+		 *  默认配置
 		 */
 		this.config = {
 			elem: undefined, //容器
@@ -99,7 +99,7 @@ layui.define(['element', 'common'], function(exports) {
 				});
 			}
 		}
-		
+
 		//只展开一个二级菜单
 		if(_config.spreadOne){
 			var $ul = $container.children('ul');

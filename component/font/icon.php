@@ -23,14 +23,14 @@ foreach ($all as $item){
 $css = <<<CSS
 
 @font-face {font-family: "iconfont";
-  src: url('d/iconfont.eot?t=1491017942037'); /* IE9*/
-  src: url('d/iconfont.eot?t=1491017942037#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('d/iconfont.woff?t=1491017942037') format('woff'), /* chrome, firefox */
-  url('d/iconfont.ttf?t=1491017942037') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('d/iconfont.svg?t=1491017942037#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1491017942037'); /* IE9*/
+  src: url('iconfont.eot?t=1491017942037#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1491017942037') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1491017942037') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1491017942037#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.iconfont {
+.icon {
   font-family:"iconfont" !important;
   font-size:16px;
   font-style:normal;
@@ -38,7 +38,7 @@ $css = <<<CSS
   -moz-osx-font-smoothing: grayscale;
 }
 
-3
+
 CSS;
 
 $li = '';
@@ -46,7 +46,7 @@ $li = '';
 foreach ($icon as $item){
     $css .= '.icon-'.$item['name'].':before { content: "\\'.substr($item['code'],3).'"; }'.PHP_EOL.PHP_EOL;
     $li .= '<li>
-            <i class="icon iconfont icon-'.$item['name'].'"></i>
+            <i class="icon icon-'.$item['name'].'"></i>
             <div class="name">'.$item['name'].'</div>
             <div class="fontclass">.icon-'.$item['name'].'</div>
         </li>';

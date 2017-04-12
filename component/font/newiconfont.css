@@ -1,13 +1,13 @@
 
 @font-face {font-family: "iconfont";
-  src: url('d/iconfont.eot?t=1491017942037'); /* IE9*/
-  src: url('d/iconfont.eot?t=1491017942037#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('d/iconfont.woff?t=1491017942037') format('woff'), /* chrome, firefox */
-  url('d/iconfont.ttf?t=1491017942037') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('d/iconfont.svg?t=1491017942037#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1491017942037'); /* IE9*/
+  src: url('iconfont.eot?t=1491017942037#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1491017942037') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1491017942037') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1491017942037#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.iconfont {
+.icon {
   font-family:"iconfont" !important;
   font-size:16px;
   font-style:normal;
@@ -267,7 +267,7 @@
 
 .icon-viewgallery:before { content: "\e6b4"; }
 
-.icon-viewlist:before { content: "\e6b5"; }
+.icon-view-list:before { content: "\e6b5"; }
 
 .icon-warning:before { content: "\e6b6"; }
 
@@ -329,11 +329,11 @@
 
 .icon-browse:before { content: "\e6e6"; }
 
-.icon-rfqqm:before { content: "\e6e7"; }
+.icon-rfq-qm:before { content: "\e6e7"; }
 
-.icon-rfqquantity:before { content: "\e6e8"; }
+.icon-rfq-quantity:before { content: "\e6e8"; }
 
-.icon-atmaway:before { content: "\e6e9"; }
+.icon-atm-away:before { content: "\e6e9"; }
 
 .icon-rfq1:before { content: "\e6eb"; }
 
@@ -347,11 +347,11 @@
 
 .icon-history:before { content: "\e6f3"; }
 
-.icon-productfeatures:before { content: "\e6f4"; }
+.icon-product-features:before { content: "\e6f4"; }
 
 .icon-supplierfeatures:before { content: "\e6f5"; }
 
-.icon-similarproduct:before { content: "\e6f6"; }
+.icon-similar-product:before { content: "\e6f6"; }
 
 .icon-link:before { content: "\e6f7"; }
 
@@ -377,19 +377,19 @@
 
 .icon-machinery:before { content: "\e709"; }
 
-.icon-assessedbadge:before { content: "\e70a"; }
+.icon-assessed-badge:before { content: "\e70a"; }
 
-.icon-gerenzhongxin:before { content: "\e70b"; }
+.icon-profile:before { content: "\e70b"; }
 
-.icon-jifen:before { content: "\e70c"; }
+.icon-points:before { content: "\e70c"; }
 
-.icon-renwuguanli:before { content: "\e70d"; }
+.icon-desk:before { content: "\e70d"; }
 
 .icon-operation:before { content: "\e70e"; }
 
 .icon-remind1:before { content: "\e713"; }
 
-.icon-icondownload:before { content: "\e714"; }
+.icon-icon-download:before { content: "\e714"; }
 
 .icon-map:before { content: "\e715"; }
 
@@ -399,9 +399,9 @@
 
 .icon-skip:before { content: "\e718"; }
 
-.icon-iconfontplay2:before { content: "\e719"; }
+.icon-iconfont-play2:before { content: "\e719"; }
 
-.icon-iconfontstop:before { content: "\e71a"; }
+.icon-iconfont-stop:before { content: "\e71a"; }
 
 .icon-compass:before { content: "\e71b"; }
 
@@ -411,27 +411,25 @@
 
 .icon-store:before { content: "\e722"; }
 
-.icon-manageorder:before { content: "\e723"; }
+.icon-manage-order:before { content: "\e723"; }
 
-.icon-rejectedorder:before { content: "\e724"; }
+.icon-rejected-order:before { content: "\e724"; }
 
 .icon-phone:before { content: "\e725"; }
 
-.icon-bussinessman:before { content: "\e726"; }
+.icon-bussiness-man:before { content: "\e726"; }
 
 .icon-shoes:before { content: "\e728"; }
 
-.icon-mobilephone:before { content: "\e72a"; }
+.icon-mobile-phone:before { content: "\e72a"; }
 
-.icon-emailfilling:before { content: "\e72d"; }
+.icon-email-fill:before { content: "\e72d"; }
 
-.icon-favoritesfilling:before { content: "\e730"; }
+.icon-favorites-fill:before { content: "\e730"; }
 
-.icon-accountfilling:before { content: "\e732"; }
+.icon-account-fill:before { content: "\e732"; }
 
-.icon-creditlevel:before { content: "\e735"; }
-
-.icon-creditlevelfilling:before { content: "\e736"; }
+.icon-credit-level:before { content: "\e735"; }
 
 .icon-exl:before { content: "\e73f"; }
 
@@ -445,9 +443,9 @@
 
 .icon-save:before { content: "\e747"; }
 
-.icon-inquirytemplate:before { content: "\e749"; }
+.icon-inquiry-template:before { content: "\e749"; }
 
-.icon-templatedefault:before { content: "\e74a"; }
+.icon-template-default:before { content: "\e74a"; }
 
 .icon-libra:before { content: "\e74c"; }
 
@@ -455,7 +453,7 @@
 
 .icon-ship:before { content: "\e74f"; }
 
-.icon-bussinesscard:before { content: "\e753"; }
+.icon-bussiness-card:before { content: "\e753"; }
 
 .icon-hot:before { content: "\e756"; }
 
@@ -471,7 +469,7 @@
 
 .icon-component:before { content: "\e75f"; }
 
-.icon-component-filling:before { content: "\e760"; }
+.icon-component-fill:before { content: "\e760"; }
 
 .icon-color:before { content: "\e761"; }
 
@@ -483,7 +481,7 @@
 
 .icon-RFQ:before { content: "\e803"; }
 
-.icon-originalimage:before { content: "\e806"; }
+.icon-original-image:before { content: "\e806"; }
 
 .icon-logistic:before { content: "\e811"; }
 
