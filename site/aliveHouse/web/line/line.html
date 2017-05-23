@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<meta name="renderer" content="webkit">
+	<meta name="keywords" content="aliveDinner">
+	<meta name="description" content="aliveDinner">
+	<meta name="author" content="aliveDinner">
+	<meta name="copyright" content="alive">
+	<title>Alive Dinner Login</title>
+
+	<link href="./comm.min.css" rel="stylesheet" type="text/css">
+	<link href="./index.min.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+        //$("body").width( $(window).width() );
+        //$("body").css("overflow","hidden");
+
+		/*
+		 document.addEventListener('touchmove', function(event) {
+		 //判断条件,条件成立才阻止背景页面滚动,其他情况不会再影响到页面滚动
+		 if(!$("body").is(":hidden")){
+		 event.preventDefault();
+		 }
+		 })
+		 */
+        //$("body").bind("touchmove",function(event){event.preventDefault;});
+
+        //document.body.addEventListener('touchmove', function (event) {
+        //event.preventDefault(); }, false);
+	</script>
+
+	<style type="text/css">
+		/*@media screen and (max-width:1020px){ */
+		/*	.nav{ }
+         .nav .nav_1{width: 980px; }
+         .nav .nav_1 .nav_nav2{width: 750px;}
+         .nav .nav_1 .nav_nav2 .nav_nav3{width: 250px;}
+         .nav .nav_1 .nav_nav2 .nav_nav3 #nav_register{margin-left: 30px;}
+         .nav .nav_1 .nav_nav2 .nav_nav3 #nav_login{margin-left: 10px;}*/
+		/*}*/
+
+	</style>
+
+</head>
+<body>
+
+	<!-- aliveHouse video start -->
+	<div id="fkVideoPreBox">
+		<div id="fkVideoLittleClose"></div>
+	</div>
+	<div id="fkVideoBg" class="hide">
+		<div id="fkVideoBox">
+			<div class="fkVideoClose"></div>
+			<div style="padding:10px;background:#fff;">
+				<video id="fkVideo" width="870" height="490" controls="controls">
+                     <source src="http://fkh.faisys.com/video/aliveHouse120MB.mp4" type="video/mp4">
+                     <p>咦，我发现您家的浏览器不支持该视频播放哦~~请升级更高版本，或用其他浏览器查看么么哒！</p>
+                </video>
+			</div>
+		</div>
+	</div>
+	<!-- aliveHouse video end -->
+
+<!-- header -->
+
+
+
+<!--nav start-->
+	<div class="nav">
+		<div class="nav_1">
+			<div id="nav_logo">
+				<a href="http://www.alivehouse.com/"><img src="./logoNew.png" style="width: 131px;height: 67px;" alt="Alive House"></a>
+				<!-- <a href="http://www.alivehouse.com"><img src="./logoNew.png?v=201602241046"  style="width: 131px;height: 67px;" alt="Alive House" /></a> -->
+			</div>
+			<div class="nav_nav2">
+				<div class="left" style="display: inline-block;">
+					<ul style="float:left;width: auto;">
+						<li class="nav_text"><a class="nav_select" href="http://www.alivehouse.com/">Home</a></li>
+						<li class="nav_text"><a hidefocus="true" href="http://www.alivehouse.com/" target="_blank">Chat</a></li>
+						<li class="nav_text"><a hidefocus="true" href="http://www.alivehouse.com/" target="_blank">Join us</a></li>
+						<li class="nav_text"><a hidefocus="true" class="" href="http://www.alivehouse.com/cooperate.html">cooperate</a></li>
+						<li class="nav_text"><a hidefocus="true" class="" href="http://www.alivehouse.com/about.html">About us</a></li>
+					</ul>
+				</div>
+				<div class="nav_nav3 right" style="display: inline-block;float: right;">
+					<div class="nav3_register"><a id="nav_register" href="http://www.alivehouse.com/reg.html" target="_blank">Register</a></div>
+					<div class="nav3_login"><a id="nav_login" href="http://www.alivehouse.com/login.html" target="_blank">Login</a></div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+	</div>
+<!--nav end-->
+
+	<!--banner start-->
+	<div class="clear"></div>
+	<div class="banner">
+	</div>
+
+	<div class="banner_jz">
+		<div class="banner_ba_jz">
+			<div class="bnner_jzwz">
+				<div class="bnner_jz_wz">
+					<span>Alive House</span>
+					<p>here are somethings,about...</p>
+					<p>here are somethings,about...</p>
+					<a href="http://www.alivehouse.com/" target="_blank">Go to!</a>
+				</div>
+				<div class="hoverLi">
+					<ul>
+						<li><a class="select2" id="hoverLi_wzyb" href="javascript:void(0);"><span>Hot</span></a></li>
+						<li><a id="hoverLi_jxal" href="javascript:void(0);"><span>Great</span></a></li>
+					</ul>
+					<span class="cursor" style="left: 694px;"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--模板banner_yb start--->
+	<div class="banner_yb">
+		<!--
+		<div class = "banner_yb_bt">
+			<ul>
+				<li class = "next_select"><a  class = "select" id = "banner_yb_wyyb" href = "javascript:void(0);">Hot</a></li>
+				<li class= "next_select"><a  id = "banner_yb_jxal" href = "javascript:void(0);">Great</a></li>
+			</ul>
+		</div>
+		-->
+		<div class="clear"></div>
+		<div class="banner_ba_yb" style="display: block; opacity: 0.0187724;">
+			<div class="banner_ba_yb_list">
+				<div><a id="banner_ba_yb_list1" href="http://www.alivehouse.com/model.html?k=1#m" target="_blank"></a></div>
+				<div><a id="banner_ba_yb_mobi_list1" href="http://www.alivehouse.com/model.html?k=1#m" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom1">
+					Description
+				</div>
+
+			</div>
+			<div class="banner_ba_yb_list">
+				<div><a id="banner_ba_yb_list2" href="http://www.alivehouse.com/model.html?k=70#m" target="_blank"></a></div>
+				<div><a id="banner_ba_yb_mobi_list2" href="http://www.alivehouse.com/model.html?k=70#m" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom1" style="display: none; opacity: 1;">
+					Description
+				</div>
+			</div>
+			<div class="banner_ba_yb_list">
+				<div><a id="banner_ba_yb_list3" href="http://www.alivehouse.com/model.html?k=1003#m" target="_blank"></a></div>
+				<div><a id="banner_ba_yb_mobi_list3" href="http://www.alivehouse.com/model.html?k=1003#m" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom1">
+					Description
+				</div>
+			</div>
+			<div class="banner_ba_yb_list">
+				<div><a id="banner_ba_yb_list4" href="http://www.alivehouse.com/model.html?k=18#m" target="_blank"></a></div>
+				<div><a id="banner_ba_yb_mobi_list4" href="http://www.alivehouse.com/model.html?k=18#m" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom1">
+					Description
+				</div>
+			</div>
+			<div class="banner_ba_yb_list">
+				<div><a id="banner_ba_yb_list5" href="http://www.alivehouse.com/model.html?k=37#m" target="_blank"></a></div>
+				<div><a id="banner_ba_yb_mobi_list5" href="http://www.alivehouse.com/model.html?k=37#m" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom1" style="display: none; opacity: 1;">
+					Description
+				</div>
+			</div>
+			<div class="banner_ba_yb_list">
+				<div><a id="banner_ba_yb_list6" href="http://www.alivehouse.com/model.html?k=32#m" target="_blank"></a></div>
+				<div><a id="banner_ba_yb_mobi_list6" href="http://www.alivehouse.com/model.html?k=32#m" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom1">
+					Description
+				</div>
+			</div>
+			<!--模板banner_yb end--->
+		</div>
+		<!--模板banner_yb2 start--->
+		<div class="banner_ba_yb2" style="display: block; opacity: 0.981228;">
+
+			<div class="banner_yb_list">
+				<div><a class="banner_dw" id="banner_ba_yb2_list1" href="http://www.alivehouse.com/case.html" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom">
+					<span>Description</span>
+				</div>
+			</div>
+
+			<div class="banner_yb_list">
+				<div><a class="banner_dw" id="banner_ba_yb2_list2" href="http://www.alivehouse.com/case.html" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom" style="display: none; opacity: 1;">
+					<span>Description</span>
+				</div>
+			</div>
+			<div class="banner_yb_list">
+				<div><a class="banner_dw" id="banner_ba_yb2_list3" href="http://www.alivehouse.com/case.html" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom">
+					<span>Description</span>
+				</div>
+			</div>
+			<div class="banner_yb_list">
+				<div><a class="banner_dw" id="banner_ba_yb2_list4" href="http://www.alivehouse.com/case.html" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom">
+					<span>Description</span>
+
+				</div>
+			</div>
+			<div class="banner_yb_list">
+				<div><a class="banner_dw" id="banner_ba_yb2_list5" href="http://www.alivehouse.com/case.html" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom">
+					<span>Summer</span>
+
+				</div>
+			</div>
+			<div class="banner_yb_list">
+				<div><a class="banner_dw" id="banner_ba_yb2_list6" href="http://www.alivehouse.com/case.html" target="_blank"></a></div>
+				<div class="banner_yb_list_bottom">
+					<span>Description</span>
+				</div>
+			</div>
+		</div>
+		<!--模板banner_yb2 end--->
+	</div>
+	<!--模板end-->
+
+	<div class="banner_hd">
+		<div class="banner_ba_hd">
+			<div class="banner_hd_wz">
+				<a href="http://www.alivehouse.com/" target="_blank" class="spanText" title="Join Alive House Party">Join Alive House Party</a>
+				<p>Help You To See The world On The Top Of Life</p>
+				<p>Earn Easy</p>
+				<a href="http://www.alivehouse.com/" target="_blank" class="aText">Do It Now!</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner_flyer">
+		<div class="banner_ba_flyer">
+			<div class="banner_flyer_wz">
+				<a href="http://cd.aliveHouse.com/" target="_blank" class="spanText" title="Alive House Advertise">Advertise</a>
+				<p>Information is passed soon By This</p>
+				<p>Fast 、Easy </p>
+				<p>Run company well</p>
+				<a href="http://cd.aliveHouse.com/" target="_blank" class="aText">Follow Me!<span></span></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner_hd_email">
+		<div class="banner_ba_hd_email">
+			<div class="bnner_email_wz">
+				<span>Alive House Email</span>
+				<p>The Company Email</p>
+				<p>Promote Corporate Identity</p>
+				<a href="http://www.alivehouse.com/mail.html" target="_blank">More<span></span></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner_wxast">
+		<div class="banner_ba_wxast">
+			<div class="banner_wxast_wz">
+				<span>Alive House Helper</span>
+				<p>Alive</p>
+				<p>House</p>
+				<p>Helper</p>
+				<a href="http://mp.aliveHouse.com/" target="_blank">More<span></span></a>
+			</div>
+		</div>
+	</div>
+
+<!-- news -->
+<div class="newsContent">
+	<div class="newsTitle blueTitle2">Hot</div>
+    <div class="newsListDiv middle">
+
+		<div class="newsList">
+        	<div class="newsTop">
+            	<div class="newsMounth">MAY</div>
+                <a hidefocus="true" class="newsListTitle" href="http://www.alivehouse.com/blog/7979" target="_blank">Alive House ...</a>
+            </div>
+            <div class="newsBottom">
+            	<div class="newsDay">11</div>
+                <div class="newsSummary">Alive Hous ...</div>
+            </div>
+        </div>
+
+		<div class="newsList">
+        	<div class="newsTop">
+            	<div class="newsMounth">APR</div>
+                <a hidefocus="true" class="newsListTitle" href="http://www.alivehouse.com/blog/7711" target="_blank">Something about ...</a>
+            </div>
+            <div class="newsBottom">
+            	<div class="newsDay">12</div>
+                <div class="newsSummary">Sure be ...</div>
+            </div>
+        </div>
+
+
+		<div class="newsList">
+        	<div class="newsTop">
+            	<div class="newsMounth2">MAY</div>
+                <a hidefocus="true" class="newsListTitle2" href="http://www.alivehouse.com/news/8002" target="_blank">Alive House daily wall</a>
+            </div>
+            <div class="newsBottom">
+            	<div class="newsDay">10</div>
+                <div class="newsSummary">Here are some ...</div>
+            </div>
+        </div>
+
+
+		<div class="newsList">
+        	<div class="newsTop">
+            	<div class="newsMounth2">APR</div>
+                <a hidefocus="true" class="newsListTitle2" href="http://www.alivehouse.com/news/7708" target="_blank">Alive House</a>
+            </div>
+            <div class="newsBottom">
+            	<div class="newsDay">12</div>
+                <div class="newsSummary"></div>
+            </div>
+        </div>
+
+
+		<div class="newsList">
+        	<div class="newsTop">
+            	<div class="newsMounth">MAY</div>
+                <a hidefocus="true" class="newsListTitle" href="http://www.alivehouse.com/blog/8028" target="_blank">XXX</a>
+            </div>
+            <div class="newsBottom">
+            	<div class="newsDay">15</div>
+                <div class="newsSummary">We will do ...</div>
+            </div>
+        </div>
+
+		<div class="newsList">
+        	<div class="newsTop">
+            	<div class="newsMounth">MAY</div>
+                <a hidefocus="true" class="newsListTitle" href="http://www.alivehouse.com/blog/7920" target="_blank">This three points ...</a>
+            </div>
+            <div class="newsBottom">
+            	<div class="newsDay">9</div>
+                <div class="newsSummary">Just get it ,and to be better ...</div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- news end -->
+
+<!-- link -->
+<div class="webLink_index">
+	<div id="link_index" class="link_index middle">
+    	<div class="linkLeft">
+        	<div class="linkTitle">Identity</div>
+            <div class="linkLeftContent">
+            	<div class="linkLeftPicture"><a hidefocus="true" class="linkLeftPic1" href="http://www.alivehouse.com/qualification.html#check=5" target="_blank" title="企业营业执照" rel="nofollow"></a></div>
+                <div class="linkLeftPicture"><a hidefocus="true" class="linkLeftPic2" href="http://www.alivehouse.com/qualification.html#check=2" target="_blank" title="证书" rel="nofollow"></a></div>
+                <div class="linkLeftPicture"><a hidefocus="true" class="linkLeftPic3" href="http://www.alivehouse.com/qualification.html#check=2" target="_blank" title="证书" rel="nofollow"></a></div>
+                <div class="linkLeftPicture"><a hidefocus="true" class="linkLeftPic9" href="http://www.alivehouse.com/qualification.html#check=5" target="_blank" title="经营许可证（ICP）" rel="nofollow"></a></div>
+
+                <div class="linkLeftPicture"><a hidefocus="true" class="linkLeftPic8" href="http://www.alivehouse.com/qualification.html#check=5" target="_blank" title="ISO9001认证" rel="nofollow"></a></div>
+                <div class="linkLeftPicture" style="margin-right:0"><a hidefocus="true" class="linkLeftPic4" href="http://www.alivehouse.com/qualification.html#check=1" target="_blank" title="company name" rel="nofollow"></a></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="linkLine"></div>
+        <div class="linkRight">
+        	<div class="linkTitle">Partner</div>
+            <div class="linkRighContentt">
+            	<div class="linkRightPicture"><a hidefocus="true" class="linkRightPic1" href="https://www.tenpay.com/" target="_blank" rel="nofollow"></a></div>
+                <div class="linkRightPicture"><a hidefocus="true" class="linkRightPic2" href="https://www.alipay.com/" target="_blank" rel="nofollow"></a></div>
+                <div class="linkRightPicture"><a hidefocus="true" class="linkRightPic3" href="http://www.chinatelecom.com.cn/" target="_blank" rel="nofollow"></a></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="linkLine2"></div>
+        <div class="linkMiddle">
+        	<div class="linkTitle">Links</div>
+            <div class="linkMiddleContent">
+
+                	<a hidefocus="true" class="linkUrl" href="http://www.alivehouse.com/" target="_blank">New House</a>
+
+                	<a hidefocus="true" class="linkUrl" href="http://www.sitekc.com/" target="_blank">Second hand house</a>
+
+                	<a hidefocus="true" class="linkUrl" href="http://www.alivehouse.com/" target="_blank">About us</a>
+
+                	<a hidefocus="true" class="linkUrl" href="http://www.alivehouse.com/blog.html?w=%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE" target="_blank">Contact</a>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- link end -->
+
+<!-- footer -->
+
+<div id="autoHeightDiv"></div>
+
+<div class="footLineGray"></div>
+<div class="lineWhite"></div>
+<div class="webFoot">
+	<div class="foot middle" style="width:980px;">
+		<div class="footLinks">
+			<span><a hidefocus="true" href="http://www.alivehouse.com/">Home</a></span>
+			<span><a hidefocus="true" href="http://www.alivehouse.com/about.html">About us Alive House</a></span>
+			<span><a hidefocus="true" href="http://www.alivehouse.com/blog.html" target="_blank">Help</a></span>
+			<span><a hidefocus="true" href="http://www.alivehouse.com/contract.html" rel="nofollow">Protocol</a></span>
+			<span><a hidefocus="true" href="http://www.alivehouse.com/contract.html?s=2" rel="nofollow">Legal</a></span>
+			<span><a hidefocus="true" href="http://www.alivehouse.com/proCase.html" target="_blank">Customers</a></span>
+			<span><a hidefocus="true" href="http://www.alivehouse.com/cooperate.html" target="_blank">cooperate</a></span>
+		</div>
+		<div class="footCpy">
+			<a target="_blank" hidefocus="true" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=XXX">
+				<img src="./beianIcon.png" width="20" height="20" style="vertical-align:middle;">
+				<span style="color:#777;">备案信息</span>
+			</a>
+			<span style="display:inline-block; margin:0 10px;">|</span>
+			Copyright <font style="font-family:'微软雅黑';">©</font> 2010-2017 Alive House <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">备案号:XXX</a> 股票代码：XXX
+		</div>
+		<div class="footCert">
+			<a target="_blank" hidefocus="true" href="http://www.itrust.org.cn/Home/Index/itrust_certifi?wm=XXX"><img src="./iTrust.jpg" style="margin:10px 0;"></a>
+		</div>
+	</div>
+</div>
+
+
+<!-- service -->
+<script type="text/javascript" src="./jquery-core.min.js"></script>
+<script type="text/javascript" src="./jquery-ui-core.min.js"></script>
+<script type="text/javascript" src="./fai.min.js"></script>
+
+<link href="./serviceBox.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./service.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$(".nav").hover(function(){
+		$(".nav").removeClass("navHover");
+		$(this).addClass("navHover");
+	}, function(){
+		$(this).removeClass("navHover");
+	});
+	
+	$(".webRegCount .weixin").hover(function(){
+		$(this).attr('_mouseIn', 1);
+		var div = $(this).find(".weixinContent").show();
+		div.show();
+	}, function(){
+		$(this).attr('_mouseIn', 0);
+		setTimeout(function(){
+			var mouseIn = parseInt($('.webRegCount .weixin').attr('_mouseIn'));
+			if(mouseIn == 0){
+				$('.webRegCount .weixin').find(".weixinContent").hide();
+			}
+		}, 100);
+	});
+	$(".webRegCount .weixin .weixinContent").hover(function(){
+		$('.webRegCount .weixin').attr('_mouseIn', 1);
+	}, function(){
+		$('.webRegCount .weixin').attr('_mouseIn', 0);
+		setTimeout(function(){
+			var mouseIn = parseInt($('.webRegCount .weixin').attr('_mouseIn'));
+			if(mouseIn == 0){
+				$(".webRegCount .weixin .weixinContent").hide();
+			}
+		}, 100);
+	});
+	
+	$(".webRegCount .phone").hover(function(){
+		$(this).attr('_mouseIn', 1);
+		var div = $(this).find(".phoneContent").show();
+		div.show();
+	}, function(){
+		$(this).attr('_mouseIn', 0);
+		setTimeout(function(){
+			var mouseIn = parseInt($('.webRegCount .phone').attr('_mouseIn'));
+			if(mouseIn == 0){
+				$('.webRegCount .phone').find(".phoneContent").hide();
+			}
+		}, 100);
+	});
+	$(".webRegCount .phone .phoneContent").hover(function(){
+		$('.webRegCount .phone').attr('_mouseIn', 1);
+	}, function(){
+		$('.webRegCount .phone').attr('_mouseIn', 0);
+		setTimeout(function(){
+			var mouseIn = parseInt($('.webRegCount .phone').attr('_mouseIn'));
+			if(mouseIn == 0){
+				$(".webRegCount .phone .phoneContent").hide();
+			}
+		}, 100);
+	});
+	
+	footAutoHeight();
+});
+
+function footAutoHeight(){
+	if ($('.footLineGray').length != 0){	
+		var footHeightDifference = document.documentElement.clientHeight - ($('.footLineGray').offset().top + 2 + $('.webFoot').height());
+		if ( footHeightDifference > 0 ){
+			$('#autoHeightDiv').css("height", footHeightDifference);
+		}
+	}
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+$(function(){
+	if (Fai.isIE6()|| Fai.isIE7()){
+		$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi").find(".cursor").stop(true).animate({top:"555px"});
+	}
+	(function(){
+		var curr = 0;
+
+		//自动翻
+		var timer = setInterval(function(){
+			//todo = (curr + 1);
+			if(curr>1) {
+				curr = 0;
+			}
+			//$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi ul li").eq(curr).mouseover();
+			lunbo(curr);
+			curr ++;
+		},3000);
+		
+		//鼠标悬停在触发器上时停止自动翻
+		$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi span").hover(function(){
+				clearInterval(timer);
+			},
+			function(){
+				
+				timer = setInterval(function(){
+				//todo = (curr + 1) % 3;
+				//$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi ul li").eq(curr).mouseover();
+				if(curr>1) {
+					curr = 0;
+				}
+				lunbo(curr);
+				curr++;
+				},3000);			
+			}
+		);
+
+
+		//鼠标悬停在触发器上时停止自动翻
+		$(".banner_ba_yb2 .banner_yb_list").hover(function(){
+				clearInterval(timer);
+			},
+			function(){
+				
+				timer = setInterval(function(){
+				//todo = (curr + 1) % 3;
+				//$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi ul li").eq(curr).mouseover();
+				if(curr>1) {
+					curr = 0;
+				}
+				lunbo(curr);
+				curr++;
+				},3000);			
+			}
+		);
+		//鼠标悬停在触发器上时停止自动翻
+		$(".banner_ba_yb .banner_ba_yb_list").hover(function(){
+				clearInterval(timer);
+			},
+			function(){
+				
+				timer = setInterval(function(){
+				//todo = (curr + 1) % 3;
+				//$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi ul li").eq(curr).mouseover();
+				if(curr>1) {
+					curr = 0;
+				}
+				lunbo(curr);
+				curr++;
+				},3000);			
+			}
+		);
+
+		 
+		$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi ul li").mouseover(function(){
+		  
+			var index = $(this).index();				
+				lunbo(index);
+		});
+
+
+		function lunbo(index){
+			//var index = $(this).index();				
+			if(index==0){
+				//$(".banner_ba_yb").find("#hoverLi_wzyb").animate({left:"694px"}, 300);
+				//$(".banner_ba_yb").find("#hoverLi_wzyb").animate({left:"216px"}, 800);
+				//$(this).find("#hoverLi_wzyb").animate({left:"216px"}, 800).addClass("select2");
+				$(".banner_ba_yb").fadeIn();
+				$(".banner_ba_yb2").fadeOut();
+				$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi").find(".cursor").stop(true).animate({left:"216px"}, 300);
+				// $(this).find("a").animate({left:"216px"}, 1000).addClass("select2").parent().siblings("li").find("a").animate({left:"694px"}, //800).removeClass("select2");
+			}else if(index==1) {
+				$(".banner_ba_yb2").fadeIn();
+				$(".banner_ba_yb").fadeOut();
+				$(".banner_jz .banner_ba_jz .bnner_jzwz .hoverLi").find(".cursor").stop(true).animate({left:"694px"}, 300);
+			}
+		}
+
+		$('#fkVideoPreBox').click(function(){
+			$('#fkVideoBg').show();
+			document.getElementById('fkVideo').play();
+		});
+		$('.fkVideoClose').click(function(){
+			$('#fkVideoBg').hide();
+			document.getElementById('fkVideo').pause();
+		});
+	
+		$('#fkVideoLittleClose').click(function(){
+			$("#fkVideoPreBox").remove();
+		});
+
+	})();
+
+
+	$(".banner_ba_yb2 .banner_yb_list").hover(function() {
+		if($(this).find(".banner_yb_list_bottom").is(":animated")){
+			$(this).find(".banner_yb_list_bottom").stop();
+		}
+		$this = $(this);
+		$this.find(".banner_yb_list_bottom").fadeIn();				
+	},function() {
+		if($(this).find(".banner_yb_list_bottom").is(":animated")){
+			$(this).find(".banner_yb_list_bottom").stop();
+		}
+		$this.find(".banner_yb_list_bottom").fadeOut();
+	});
+
+	$(".banner_ba_yb .banner_ba_yb_list").hover(function() {
+		//$this = $(this);
+		if($(this).find(".banner_yb_list_bottom1").is(":animated")){
+			$(this).find(".banner_yb_list_bottom1").stop();
+		}
+		$(this).find(".banner_yb_list_bottom1").fadeIn();				
+	},function() {
+		if($(this).find(".banner_yb_list_bottom1").is(":animated")){
+			$(this).find(".banner_yb_list_bottom1").stop();
+		}
+		$(this).find(".banner_yb_list_bottom1").fadeOut();
+	});
+		
+	try {
+		if(!Fai.isIE() && window.console && window.console.log){
+			var str = "\n"+
+　　
+　　　　　"　▃▃　　　　▃▃　　　　▃▃▃▃　　    ▃▃　　　　▃▃　　　　▃▃▃　　　　　▃▃▃▃▃▃▃▃　　\n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　  ▃▃▃▃▃▃　　  ▃▃　　　　▃▃　　  ▃▃▃▃▃　　　　▃▃▃▃▃▃▃▃　　\n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　 ▃▃▃　▃▃▃　　 ▃▃　　　　▃▃　　▃▃　　　▃▃　　　▃▃　　　　　　　　\n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　▃▃　　　　▃▃　　▃▃　　　　▃▃　　▃▃　　　　　　　　▃▃　　　　　　　　\n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　▃▃　　　　▃▃　　▃▃　　　　▃▃　　 ▃▃　　　　　　　 ▃▃　　　　　　　　\n"+　　　　
+　　　　　"　▃▃▃▃▃▃▃▃　　▃▃　　　　▃▃　　▃▃　　　　▃▃　　　▃▃▃　　　　　　▃▃▃▃▃▃▃▃　　\n"+　　　　
+　　　　　"　▃▃▃▃▃▃▃▃　　▃▃　　　　▃▃　　▃▃　　　　▃▃　　　　　▃▃▃　　　　▃▃▃▃▃▃▃▃　　\n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　▃▃　　　　▃▃　　▃▃　　　　▃▃　　　　　　　▃▃　　　▃▃　　　　　　　　\n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　▃▃　　　　▃▃　　▃▃　　　　▃▃　　　　　 　 ▃▃　 　 ▃▃　　　　　　　　\n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　 ▃▃▃　▃▃▃　　  ▃▃▃　▃▃▃　　 ▃▃　　　▃▃　 　 ▃▃　　　　　　　 \n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　  ▃▃▃▃▃▃　　    ▃▃▃▃▃▃　　　  ▃▃▃▃▃　 　   ▃▃▃▃▃▃▃▃　 \n"+　　　　
+　　　　　"　▃▃　　　　▃▃　　    ▃▃▃▃　　         ▃▃▃　 　　　 　▃▃▃　 　 　  ▃▃▃▃▃▃▃▃　 \n"+
+				'';
+			console.log("\n%c"+str+"\n\n", "font-size:12px;color:#045aaf;");
+			console.log("兄弟，恭喜你，看到这段内容就说明我们很有猿粪\n Alive House有一群憨(wei)厚(suo)的程序猿在奋斗，期待你的加入\r\n各种福(zhong)利(zi)等你来!\r\n职位介绍：http://www.alivehouse.com/recruitment.html \r\n请将简历发送至 %c num@aliveHouse.com（ 邮件标题请以“姓名-应聘XX职位-来自console”命名）", "color:red");
+			console.warn("憨厚小伙等着你 (づ~ 3~)づ");
+		}
+	}catch (e){}
+
+});
+
+</script>
+
+</body>
+</html>
