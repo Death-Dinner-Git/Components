@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://www.jq22.com/demo/jQueryJgt201706081614/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">-->
+    
+    <title>可拖拽、增加、删除、编辑的组织结构图</title>
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="./jquery.jOrgChart.css">
+    <link rel="stylesheet" href="./custom.css">
+
+    <style>
+        .jOrgChart .node{
+            line-height: 60px;
+            font-size: 12px;
+        }
+        .add{
+            display: none;
+        }
+        .add p{
+            width: 90px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            background: #00a0e9;
+            float: left;
+            margin-left: 25px;
+            cursor: pointer;
+        }
+        .add input{
+            padding: 0;
+            padding-left: 5px;
+            margin-left: 25px;
+            float: left;
+            width: 120px;
+            height: 32px;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+    <!-- jQuery includes -->
+    <script src="./jquery-1.10.2.js"></script><script src="./jquery.min.js"></script>
+    <script src="./jquery-ui-1.11.0.js"></script><script src="./jquery-ui.min.js"></script>
+    <script src="./jquery.jOrgChart.js"></script>
+
+    <script>
+
+        jQuery(document).ready(renderTree.bind(null,rightClick));
+
+        function renderTree(cb){
+            $("#org").jOrgChart({
+                chartElement: '#chart',
+                dragAndDrop: true
+            });
+            setTimeout(function(){
+                cb && cb();
+            })
+        }
+        //åˆ é™¤
+      /*  function deleteClick(){
+            $('.node').on('contextmenu',function(e){
+                e.preventDefault();
+                var sourceLi1 = $(`#org li:contains("${$(this).text()}")`).last();
+                        sourceLi1.remove();
+                        $('.jOrgChart').remove();
+                        renderTree(deleteClick);
+
+            })
+        }*/
+
+      //ç¼–è¾‘
+       /* $('.node').on('contextmenu',function(e){
+            e.preventDefault();
+            var sourceLi1 = $(`#org li:contains("${$(this).text()}")`).last();
+            $('body').append(mark);
+            var attext = $(this).text();
+            var athtml = $(sourceLi1).html();
+            $('.mark').on('blur',function(){
+                var val =  $(this).val();
+                var str1 =attext.trim();
+                var str2 = athtml.replace(str1,val);
+                $(sourceLi1).html(str2);
+                $('.jOrgChart').remove();
+                renderTree(redactClick);
+            })
+        })*/
+       //æ·»åŠ 
+
+        function rightClick(){
+
+            $('.node').on('click',function(e){
+                $(".add").show();
+                var that = this;
+                $(".add").children('input.mark').remove();
+                var mark = $("<input type='text' class='mark' maxlength='8'/>");
+                $('.add').find('p').eq(0).before(mark);
+                //æ·»åŠ 
+                $(".newAdd").unbind('click').click(function (){
+                e.preventDefault();
+//                if(confirm('ç¡®è®¤æ·»åŠ ')){
+                    var str = '<li>新加块</li>';
+                    var str1 = '<ul><li>新加块</li><li>新加块</li><li>新加块</li></ul>';
+                    var tableDivs = $(`.jOrgChart div:contains("${$(that).text()}")`);
+                    var index = tableDivs.index($(that));
+                    var text = $(that).text().trim();
+                    var sourceLis = [];
+
+                $(`#org li`).each(function(index,item){
+                    if($(item).text().trim().indexOf(text) === 0){
+                        sourceLis.push($(item));
+                    };
+                });
+                sourceLi = sourceLis[index];
+                    if(sourceLi.children().length === 0) {
+                        sourceLi.append(str1);
+                    }else{
+                        sourceLi.children().children('li:last').after(str);
+                    };
+                        $('.jOrgChart').remove();
+                        renderTree(rightClick);
+                    $(".add").hide();
+                });
+                //åˆ é™¤
+                $(".newDel").unbind('click').click(function () {
+                    e.preventDefault();
+                    var sourceLi1 = $(`#org li:contains("${$(that).text()}")`).last();
+                    sourceLi1.remove();
+                    $('.jOrgChart').remove();
+                    renderTree(rightClick);
+                    $(".add").hide();
+                });
+                //ç¼–è¾‘
+                $('.mark').unbind('click').blur(function(){
+                    e.preventDefault();
+                    var sourceLi1 = $(`#org li:contains("${$(that).text()}")`).last();
+                    var attext = $(that).text();
+                    var athtml = $(sourceLi1).html();
+                        var val =  $(this).val();
+                        var str1 =attext.trim();
+                        var str2 = athtml.replace(str1,val);
+                        $(sourceLi1).html(str2);
+                        $('.jOrgChart').remove();
+                        renderTree(rightClick);
+                        $(".add").hide();
+                    })
+                });
+        }
+
+    </script>
+</head>
+
+<body>
+
+<div class="add">
+  
+    <p class="newAdd">增加</p>
+    <p class="newDel">删除</p>
+	<span style="padding-left: 30px;color: black "> 输入框空时增加块，有内容时修改当前块值</span>
+</div>
+
+<ul id="org" style="display:none">
+    <li>
+        Food
+        <ul>
+            <li id="beer">Beer</li>
+            <li>Vegetables
+                <ul>
+                    <li>Pumpkin</li>
+                    <li>
+                        jq22
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<div id="chart" class="orgChart"><div class="jOrgChart"><table cellpadding="0" cellspacing="0" border="0"><tbody><tr class="node-cells"><td class="node-cell" colspan="4"><div class="node ui-draggable ui-draggable-handle ui-droppable" style="cursor: n-resize;">
+        Food
+        
+    </div></td></tr><tr><td colspan="4"><div class="line down"></div></td></tr><tr><td class="line left">&nbsp;</td><td class="line right top">&nbsp;</td><td class="line left top">&nbsp;</td><td class="line right">&nbsp;</td></tr><tr><td class="node-container" colspan="2"><table cellpadding="0" cellspacing="0" border="0"><tbody><tr class="node-cells"><td class="node-cell" colspan="2"><div class="node ui-draggable ui-draggable-handle ui-droppable">Beer</div></td></tr></tbody></table></td><td class="node-container" colspan="2"><table cellpadding="0" cellspacing="0" border="0"><tbody><tr class="node-cells"><td class="node-cell" colspan="4"><div class="node ui-draggable ui-draggable-handle ui-droppable" style="cursor: n-resize;">Vegetables
+                
+            </div></td></tr><tr><td colspan="4"><div class="line down"></div></td></tr><tr><td class="line left">&nbsp;</td><td class="line right top">&nbsp;</td><td class="line left top">&nbsp;</td><td class="line right">&nbsp;</td></tr><tr><td class="node-container" colspan="2"><table cellpadding="0" cellspacing="0" border="0"><tbody><tr class="node-cells"><td class="node-cell" colspan="2"><div class="node ui-draggable ui-draggable-handle ui-droppable">Pumpkin</div></td></tr></tbody></table></td><td class="node-container" colspan="2"><table cellpadding="0" cellspacing="0" border="0"><tbody><tr class="node-cells"><td class="node-cell" colspan="2"><div class="node ui-draggable ui-draggable-handle ui-droppable">
+                        jq22
+                    </div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<!--Created by liyongsheng on 2017/3/23.-->
+
+</body></html>
